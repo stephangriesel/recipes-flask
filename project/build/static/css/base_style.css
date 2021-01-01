@@ -1,0 +1,59 @@
+/* Overall Styling
+ *****************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(23, 50, 91, 1.0);
+  background-image: url('../img/lukas-blazek-f-TWhXOrLiU-unsplash_cropped.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+
+
+/* Navigation Bar
+ ****************/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12px;
+  padding: 10px 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.44);
+  box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.52);
+}
+
+nav {
+  margin: auto 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav__link, .nav__link:visited {
+  text-decoration: none;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.nav__item + .nav__item {
+  margin-left: 2.0rem;
+}
+
+
+/* Footer
+ ********/
+footer {
+  text-align: center;
+}
