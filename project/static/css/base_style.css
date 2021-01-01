@@ -1,3 +1,19 @@
+:root {
+  /* color variables */
+  --clr-primary: #304ffe;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+
+  /* border radius */
+  --radius: 0.2rem;
+}
+
+
 /* Overall Styling
  *****************/
 * {
@@ -49,6 +65,56 @@ nav ul {
 
 .nav__item + .nav__item {
   margin-left: 2.0rem;
+}
+
+
+/* Cards
+ *******/
+.recipe-container {
+  margin: 2.0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.3fr));
+  grid-gap: 2.0rem;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  border-radius: var(--radius);
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card__image {
+  height: 16rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 70%;
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
+  color: #f1f1f1; /* Grey text */
+}
+
+.card__body h2 {
+  border-bottom: 3px solid black;
+  font-weight: bold;
+}
+
+.card__body p {
+  font-weight: lighter;
 }
 
 
