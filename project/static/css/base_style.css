@@ -32,6 +32,15 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+.card-overlay {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
 
 /* Navigation Bar
  ****************/
@@ -101,7 +110,7 @@ nav ul {
 .card__body {
   width: 100%;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   position: absolute;
   top: 70%;
   background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
@@ -117,10 +126,28 @@ nav ul {
   font-weight: lighter;
 }
 
+.recipe-badge {
+  border-radius: 6px;
+  padding: 4px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-top: 6px;
+}
+
+.dairy-free-badge {
+  background-color: green;
+  color: white;
+}
+
+.soy-free-badge {
+  background-color: purple;
+  color: white;
+}
+
 
 /* Footer
  ********/
 footer {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
