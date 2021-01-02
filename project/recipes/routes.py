@@ -14,4 +14,4 @@ def breakfast_recipes():
 
 @recipes_blueprint.route('/breakfast/pancakes')
 def breakfast_recipe_pancake():
-    return render_template('recipes/recipe_details.html')
+    return render_template('recipes/pancakes.html')
