@@ -1,0 +1,78 @@
+/* Recipe Container
+ ******************/
+.recipe-title {
+    grid-area: title;
+}
+.recipe-description {
+    grid-area: description;
+}
+.recipe-image {
+    grid-area: image;
+}
+.recipe-tips {
+    grid-area: tips;
+}
+.recipe-ingredients {
+    grid-area: ingredients;
+}
+.recipe-steps {
+    grid-area: steps;
+}
+
+.recipe-detail-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 1rem;
+    grid-template-areas:
+        "...  title        ..."
+        "...  image        ..."
+        "...  description  ..."
+        "...  tips         ..."
+        "...  ingredients  ..."
+        "...  steps        ..."
+}
+
+@media screen and (min-width: 900px) {
+    .recipe-detail-container {
+        grid-template-columns: 10% 25% auto 10%;
+        grid-template-areas:
+            "...  title        title  ..."
+            "...  description  image  ..."
+            "...  tips         tips   ..."
+            "...  ingredients  steps  ..."
+    }
+}
+
+
+/* Recipe Sections
+ *****************/
+.recipe-title {
+    margin: auto;
+    font-size: 2.0em;
+}
+
+.recipe-detail-container h2 {
+    text-align: center;
+    border-bottom: 3px solid black;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+.recipe-detail-container p {
+    padding: 1rem 0;
+}
+
+.recipe-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.recipe-detail-container ul, .recipe-detail-container ol {
+    list-style-position: inside;
+    padding: 1rem 0;
+}
+
+.recipe-detail-container li {
+    padding: 0.6rem 0;
+}
