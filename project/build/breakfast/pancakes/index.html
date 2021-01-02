@@ -1,27 +1,67 @@
-{% extends "recipe.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Flask Recipe App</title>
 
-{% block recipe_title %}
+        <!-- Local CSS file for styling the application-->
+        <link rel="stylesheet" href="/static/css/base_style.css">
+
+        <!-- Additional Styling -->
+        
+<link rel="stylesheet" href="/static/css/recipe_style.css">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Kennedy Family Recipes</h1>
+            <nav>
+                <ul>
+                    <li class="nav__item"><a href="/" class="nav__link">Recipes</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <!-- child template -->
+            
+<div class="recipe-detail-container">
+    <div class="recipe-title">
+        
 <h1>Pancakes</h1>
-{% endblock %}
 
-{% block recipe_description %}
+    </div>
+
+    <div class="recipe-description card-overlay">
+        
 <h2>Description</h2>
 <p>Pancakes are a breakfast classic and this pancake recipe makes fluffy and light pancakes!</p>
 <p>I love making pancakes on the weekend, especially with a side of bacon!</p>
 <p>I've use Bisquik for making pancakes before, as the regular Bisquik mix is dairy-free.  When we ran out of Bisquik mix one weekend, I started researching pancake recipes and came up with this recipe.  I think making pancakes from scratch is almost as easy as using a mix, plus you're in control of all of the ingredients.</p>
-{% endblock %}
 
-{% block recipe_image %}
-<img src="{{ url_for('static', filename='img/pancakes_image.jpg') }}"  alt="Pancake" />
-{% endblock %}
+    </div>
 
-{% block recipe_tips %}
+    <div class="recipe-image">
+        
+<img src="/static/img/pancakes_image.jpg"  alt="Pancake" />
+
+    </div>
+
+    <div class="recipe-tips card-overlay">
+        
 <h2>Tips</h2>
 <p>Wait to add the melted butter into the mix until just before adding the pancake mixture to the pan to cook.</p>
 <p>This recipe was inspired by the <a href="https://cafedelites.com/best-fluffy-pancakes/">fluffy pancake recipe</a> from Cafe Delites.</p>
-{% endblock %}
 
-{% block recipe_ingredients %}
+    </div>
+
+    <div class="recipe-ingredients card-overlay">
+        
 <h2>List of Ingredients</h2>
 <ul>
     <li>2 Cups of All-Purpose Flour</li>
@@ -35,9 +75,11 @@
     <li>1 Egg</li>
     <li>Extra Dairy-Free Butter (for melting in the pan)</li>
 </ul>
-{% endblock %}
 
-{% block recipe_steps %}
+    </div>
+
+    <div class="recipe-steps card-overlay">
+        
 <h2>Recipe Steps</h2>
 <ol>
     <li>In a mixing bowl, combine the dry ingredients: Flour, Sugar, Baking Powder, Baking Soda, and Salt</li>
@@ -52,4 +94,14 @@
     <li>Wait a minute (or until some golden color on the second side) and take the pancakes out of the pan</li>
     <li>Serve hot and with syrup!</li>
 </ol>
-{% endblock %}
+
+    </div>
+</div>
+
+        </main>
+
+        <footer>
+            <p>Created by Patrick Kennedy (2021)</p>
+        </footer>
+    </body>
+</html>

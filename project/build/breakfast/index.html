@@ -1,12 +1,40 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Flask Recipe App</title>
 
-{% block content %}
+        <!-- Local CSS file for styling the application-->
+        <link rel="stylesheet" href="/static/css/base_style.css">
+
+        <!-- Additional Styling -->
+        
+        
+    </head>
+
+    <body>
+        <header>
+            <h1>Kennedy Family Recipes</h1>
+            <nav>
+                <ul>
+                    <li class="nav__item"><a href="/" class="nav__link">Recipes</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <!-- child template -->
+            
 <div class="recipe-container">
 
     <div class="card">
-        <a href="{{ url_for('recipes.breakfast_recipe_pancake') }}">
+        <a href="/breakfast/pancakes/">
             <img
-              src="{{ url_for('static', filename='img/pancakes_image.jpg') }}"
+              src="/static/img/pancakes_image.jpg"
               alt="Pancakes"
               class="card__image" />
             <div class="card__body">
@@ -20,7 +48,7 @@
     <div class="card">
         <a href="#">
             <img
-              src="{{ url_for('static', filename='img/honey_bran_muffins.jpg') }}"
+              src="/static/img/honey_bran_muffins.jpg"
               alt="Honey Bran Muffins"
               class="card__image" />
             <div class="card__body">
@@ -34,7 +62,7 @@
     <div class="card">
         <a href="#">
             <img
-              src="{{ url_for('static', filename='img/acai_bowl.jpg') }}"
+              src="/static/img/acai_bowl.jpg"
               alt="Acai Bowl"
               class="card__image" />
             <div class="card__body">
@@ -48,7 +76,7 @@
     <div class="card">
         <a href="#">
             <img
-              src="{{ url_for('static', filename='img/breakfast_scramble.jpg') }}"
+              src="/static/img/breakfast_scramble.jpg"
               alt="Breakfast Scramble"
               class="card__image" />
             <div class="card__body">
@@ -62,7 +90,7 @@
     <div class="card">
         <a href="#">
             <img
-              src="{{ url_for('static', filename='img/pumpkin_donuts.jpg') }}"
+              src="/static/img/pumpkin_donuts.jpg"
               alt="Pumpkin Donuts"
               class="card__image" />
             <div class="card__body">
@@ -76,7 +104,7 @@
     <div class="card">
         <a href="#">
             <img
-              src="{{ url_for('static', filename='img/waffles.jpg') }}"
+              src="/static/img/waffles.jpg"
               alt="Waffles"
               class="card__image" />
             <div class="card__body">
@@ -90,7 +118,7 @@
     <div class="card">
         <a href="#">
             <img
-              src="{{ url_for('static', filename='img/omelette.jpg') }}"
+              src="/static/img/omelette.jpg"
               alt="Omelette"
               class="card__image" />
             <div class="card__body">
@@ -102,4 +130,11 @@
     </div>
 
 </div>
-{% endblock %}
+
+        </main>
+
+        <footer>
+            <p>Created by Patrick Kennedy (2021)</p>
+        </footer>
+    </body>
+</html>
