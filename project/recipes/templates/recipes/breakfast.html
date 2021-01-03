@@ -4,9 +4,9 @@
 <div class="recipe-container">
 
     <div class="card">
-        <a href="{{ url_for('recipes.breakfast_recipe_pancake') }}">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='pancakes') }}">
             <img
-              src="{{ url_for('static', filename='img/pancakes_image.jpg') }}"
+              src="{{ url_for('static', filename='img/pancakes.jpg') }}"
               alt="Pancakes"
               class="card__image" />
             <div class="card__body">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='honey_bran_muffins') }}">
             <img
               src="{{ url_for('static', filename='img/honey_bran_muffins.jpg') }}"
               alt="Honey Bran Muffins"
@@ -32,7 +32,7 @@
     </div>
 
     <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='acai_bowl') }}">
             <img
               src="{{ url_for('static', filename='img/acai_bowl.jpg') }}"
               alt="Acai Bowl"
