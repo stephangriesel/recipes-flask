@@ -1,6 +1,7 @@
 """
 This file (test_recipes.py) contains the functional tests for the `recipes` blueprint.
 """
+from project.recipes.routes import breakfast_recipe_names
 
 
 def test_get_home_page(test_client):
@@ -33,3 +34,27 @@ def test_get_breakfast_recipes(test_client):
     assert response.status_code == 200
     for recipe in recipes:
         assert recipe in response.data
+
+
+def test_get_individual_breakfast_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/breakfast/<recipe_name>' page is requested (GET)
+    THEN check the response is valid
+    """
+    for recipe_name in breakfast_recipe_names:
+        response = test_client.get(f'/breakfast/{recipe_name}/')
+        assert response.status_code == 200
+        assert str.encode(recipe_name) in response.data
+
+
+def test_get_invalid_individual_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/breakfast/<recipe_name>' page is requested (GET) with invalid recipe names
+    THEN check that 404 errors are returned
+    """
+    invalid_recipe_names = ['acai_bowls', 'french_toast', 'breakfast_burrito', 'abcd']
+    for recipe_name in invalid_recipe_names:
+        response = test_client.get(f'/breakfast/{recipe_name}/')
+        assert response.status_code == 404
