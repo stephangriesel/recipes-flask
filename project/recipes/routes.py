@@ -2,7 +2,8 @@ from . import recipes_blueprint
 from flask import render_template, abort
 
 
-breakfast_recipe_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins']
+breakfast_recipe_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'breakfast_scramble',
+                          'pumpkin_donuts', 'waffles', 'omelette']
 
 
 @recipes_blueprint.route('/')

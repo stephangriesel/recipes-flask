@@ -46,7 +46,7 @@
     </div>
 
     <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='breakfast_scramble') }}">
             <img
               src="{{ url_for('static', filename='img/breakfast_scramble.jpg') }}"
               alt="Breakfast Scramble"
@@ -60,7 +60,7 @@
     </div>
 
     <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='pumpkin_donuts') }}">
             <img
               src="{{ url_for('static', filename='img/pumpkin_donuts.jpg') }}"
               alt="Pumpkin Donuts"
@@ -74,7 +74,7 @@
     </div>
 
     <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='waffles') }}">
             <img
               src="{{ url_for('static', filename='img/waffles.jpg') }}"
               alt="Waffles"
@@ -88,7 +88,7 @@
     </div>
 
     <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.breakfast_recipe', recipe_name='omelette') }}">
             <img
               src="{{ url_for('static', filename='img/omelette.jpg') }}"
               alt="Omelette"

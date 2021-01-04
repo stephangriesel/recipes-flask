@@ -45,6 +45,7 @@ def test_get_individual_breakfast_recipes(test_client):
     for recipe_name in breakfast_recipe_names:
         response = test_client.get(f'/breakfast/{recipe_name}/')
         assert response.status_code == 200
+        assert str.encode(recipe_name) in response.data
 
 
 def test_get_invalid_individual_recipes(test_client):
