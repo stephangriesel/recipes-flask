@@ -1,7 +1,7 @@
 """
 This file (test_recipes.py) contains the functional tests for the `recipes` blueprint.
 """
-from project.recipes.routes import breakfast_recipe_names
+from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names
 
 
 def test_get_home_page(test_client):
@@ -11,8 +11,8 @@ def test_get_home_page(test_client):
     THEN check the response is valid
     """
     header_items = [b'Kennedy Family Recipes', b'Recipes', b'Blog', b'About']
-    recipe_types = [b'Breakfast', b'Lunch', b'Dinner', b'Side Dishes',
-                    b'Dessert', b'Smoothies', b'Baked Goods', b'Drinks']
+    recipe_types = [b'Breakfast', b'Dinner', b'Side Dishes',
+                    b'Dessert', b'Smoothies', b'Baked Goods']
     response = test_client.get('/')
     assert response.status_code == 200
     for header_item in header_items:
@@ -42,7 +42,7 @@ def test_get_individual_breakfast_recipes(test_client):
     WHEN the '/breakfast/<recipe_name>' page is requested (GET)
     THEN check the response is valid
     """
-    for recipe_name in breakfast_recipe_names:
+    for recipe_name in breakfast_recipes_names:
         response = test_client.get(f'/breakfast/{recipe_name}/')
         assert response.status_code == 200
         assert str.encode(recipe_name) in response.data
@@ -51,10 +51,37 @@ def test_get_individual_breakfast_recipes(test_client):
 def test_get_invalid_individual_recipes(test_client):
     """
     GIVEN a Flask application configured for testing
-    WHEN the '/breakfast/<recipe_name>' page is requested (GET) with invalid recipe names
+    WHEN the '/<recipe_type>>/<recipe_name>' page is requested (GET) with invalid recipe names
     THEN check that 404 errors are returned
     """
     invalid_recipe_names = ['acai_bowls', 'french_toast', 'breakfast_burrito', 'abcd']
     for recipe_name in invalid_recipe_names:
         response = test_client.get(f'/breakfast/{recipe_name}/')
         assert response.status_code == 404
+        response = test_client.get(f'/dinner/{recipe_name}/')
+        assert response.status_code == 404
+
+
+def test_get_dinner_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/dinner/' page is requested (GET)
+    THEN check the response is valid
+    """
+    recipes = [b'Steak Fajitas', b'Ground Beef Tacos', b'Pizza']
+    response = test_client.get('/dinner/')
+    assert response.status_code == 200
+    for recipe in recipes:
+        assert recipe in response.data
+
+
+def test_get_individual_dinner_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/dinner/<recipe_name>' page is requested (GET)
+    THEN check the response is valid
+    """
+    for recipe_name in dinner_recipes_names:
+        response = test_client.get(f'/dinner/{recipe_name}/')
+        assert response.status_code == 200
+        assert str.encode(recipe_name) in response.data

@@ -2,8 +2,9 @@ from . import recipes_blueprint
 from flask import render_template, abort
 
 
-breakfast_recipe_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'breakfast_scramble',
+breakfast_recipes_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'breakfast_scramble',
                           'pumpkin_donuts', 'waffles', 'omelette']
+dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza']
 
 
 @recipes_blueprint.route('/')
@@ -18,7 +19,20 @@ def breakfast_recipes():
 
 @recipes_blueprint.route('/breakfast/<recipe_name>/')
 def breakfast_recipe(recipe_name):
-    if recipe_name not in breakfast_recipe_names:
+    if recipe_name not in breakfast_recipes_names:
+        abort(404)
+
+    return render_template(f'recipes/{recipe_name}.html')
+
+
+@recipes_blueprint.route('/dinner/')
+def dinner_recipes():
+    return render_template('recipes/dinner.html')
+
+
+@recipes_blueprint.route('/dinner/<recipe_name>/')
+def dinner_recipe(recipe_name):
+    if recipe_name not in dinner_recipes_names:
         abort(404)
 
     return render_template(f'recipes/{recipe_name}.html')

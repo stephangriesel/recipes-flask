@@ -1,5 +1,5 @@
 """
-The `recipes` blueprint handles the create/read/update/delete functions for the recipes.
+The `recipes` blueprint handles displaying recipes.
 """
 from flask import Blueprint
 
