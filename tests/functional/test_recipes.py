@@ -1,7 +1,7 @@
 """
 This file (test_recipes.py) contains the functional tests for the `recipes` blueprint.
 """
-from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names
+from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names, baked_goods_recipes_names
 
 
 def test_get_home_page(test_client):
@@ -60,6 +60,8 @@ def test_get_invalid_individual_recipes(test_client):
         assert response.status_code == 404
         response = test_client.get(f'/dinner/{recipe_name}/')
         assert response.status_code == 404
+        response = test_client.get(f'/baked_goods/{recipe_name}/')
+        assert response.status_code == 404
 
 
 def test_get_dinner_recipes(test_client):
@@ -83,5 +85,30 @@ def test_get_individual_dinner_recipes(test_client):
     """
     for recipe_name in dinner_recipes_names:
         response = test_client.get(f'/dinner/{recipe_name}/')
+        assert response.status_code == 200
+        assert str.encode(recipe_name) in response.data
+
+
+def test_get_baked_goods_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/baked_goods/' page is requested (GET)
+    THEN check the response is valid
+    """
+    recipes = [b'Bagels', b'French Bread', b'Pitas']
+    response = test_client.get('/baked_goods/')
+    assert response.status_code == 200
+    for recipe in recipes:
+        assert recipe in response.data
+
+
+def test_get_individual_baked_goods_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/baked_goods/<recipe_name>' page is requested (GET)
+    THEN check the response is valid
+    """
+    for recipe_name in baked_goods_recipes_names:
+        response = test_client.get(f'/baked_goods/{recipe_name}/')
         assert response.status_code == 200
         assert str.encode(recipe_name) in response.data
