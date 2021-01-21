@@ -6,7 +6,7 @@
     <div class="card">
         <a href="{{ url_for('recipes.breakfast_recipes') }}">
             <img
-              src="{{ url_for('static', filename='img/breakfast_scramble2.jpg') }}"
+              src="{{ url_for('static', filename='img/breakfast_scramble.jpg') }}"
               alt="Breakfast"
               class="card__image" />
             <div class="card__body">
@@ -17,27 +17,14 @@
     </div>
 
     <div class="card">
-        <a href="#">
-            <img
-              src="{{ url_for('static', filename='img/lunch.jpg') }}"
-              alt="Lunch"
-              class="card__image" />
-            <div class="card__body">
-                <h2>Lunch</h2>
-                <p>3 recipes</p>
-            </div>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#">
+        <a href="{{ url_for('recipes.dinner_recipes') }}">
             <img
               src="{{ url_for('static', filename='img/dinner.jpg') }}"
               alt="Dinner"
               class="card__image" />
             <div class="card__body">
                 <h2>Dinner</h2>
-                <p>11 recipes</p>
+                <p>3 recipes</p>
             </div>
         </a>
     </div>
@@ -90,19 +77,6 @@
             <div class="card__body">
                 <h2>Baked Goods</h2>
                 <p>3 recipes</p>
-            </div>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#">
-            <img
-              src="{{ url_for('static', filename='img/drinks.jpg') }}"
-              alt="Drinks"
-              class="card__image" />
-            <div class="card__body">
-                <h2>Drinks</h2>
-                <p>0 recipes</p>
             </div>
         </a>
     </div>
