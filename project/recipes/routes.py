@@ -6,6 +6,7 @@ breakfast_recipes_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'break
                            'pumpkin_donuts', 'waffles', 'omelette']
 dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza']
 baked_goods_recipes_names = ['bagels', 'french_bread', 'pitas']
+side_dishes_recipes_names = ['sweet_potatoes', 'spanish_rice']
 
 
 @recipes_blueprint.route('/')
@@ -47,6 +48,19 @@ def baked_goods_recipes():
 @recipes_blueprint.route('/baked_goods/<recipe_name>/')
 def baked_goods_recipe(recipe_name):
     if recipe_name not in baked_goods_recipes_names:
+        abort(404)
+
+    return render_template(f'recipes/{recipe_name}.html')
+
+
+@recipes_blueprint.route('/side_dishes/')
+def side_dishes_recipes():
+    return render_template('recipes/side_dishes.html')
+
+
+@recipes_blueprint.route('/side_dishes/<recipe_name>/')
+def side_dishes_recipe(recipe_name):
+    if recipe_name not in side_dishes_recipes_names:
         abort(404)
 
     return render_template(f'recipes/{recipe_name}.html')
