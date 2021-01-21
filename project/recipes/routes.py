@@ -3,7 +3,7 @@ from flask import render_template, abort
 
 
 breakfast_recipes_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'breakfast_scramble',
-                          'pumpkin_donuts', 'waffles', 'omelette']
+                           'pumpkin_donuts', 'waffles', 'omelette']
 dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza']
 
 
