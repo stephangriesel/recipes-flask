@@ -1,12 +1,40 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Flask Recipe App</title>
 
-{% block content %}
+        <!-- Local CSS file for styling the application-->
+        <link rel="stylesheet" href="/static/css/base_style.css">
+
+        <!-- Additional Styling -->
+        
+        
+    </head>
+
+    <body>
+        <header>
+            <h1>Kennedy Family Recipes</h1>
+            <nav>
+                <ul>
+                    <li class="nav__item"><a href="/" class="nav__link">Recipes</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <!-- child template -->
+            
 <div class="recipe-container">
 
     <div class="card">
-        <a href="{{ url_for('recipes.dessert_recipe', recipe_name='brownies') }}">
+        <a href="/dessert/brownies/">
             <img
-              src="{{ url_for('static', filename='img/brownies.jpg') }}"
+              src="/static/img/brownies.jpg"
               alt="Brownies"
               class="card__image" />
             <div class="card__body">
@@ -18,9 +46,9 @@
     </div>
 
     <div class="card">
-        <a href="{{ url_for('recipes.dessert_recipe', recipe_name='chocolate_chip_cookies') }}">
+        <a href="/dessert/chocolate_chip_cookies/">
             <img
-              src="{{ url_for('static', filename='img/chocolate_chip_cookies.jpg') }}"
+              src="/static/img/chocolate_chip_cookies.jpg"
               alt="Chocolate Chip Cookies"
               class="card__image" />
             <div class="card__body">
@@ -32,9 +60,9 @@
     </div>
 
     <div class="card">
-        <a href="{{ url_for('recipes.dessert_recipe', recipe_name='linzer_cookies') }}">
+        <a href="/dessert/linzer_cookies/">
             <img
-              src="{{ url_for('static', filename='img/linzer_cookies.jpg') }}"
+              src="/static/img/linzer_cookies.jpg"
               alt="Linzer Cookies"
               class="card__image" />
             <div class="card__body">
@@ -46,9 +74,9 @@
     </div>
 
     <div class="card">
-        <a href="{{ url_for('recipes.dessert_recipe', recipe_name='sugar_cookies') }}">
+        <a href="/dessert/sugar_cookies/">
             <img
-              src="{{ url_for('static', filename='img/sugar_cookies.jpg') }}"
+              src="/static/img/sugar_cookies.jpg"
               alt="Sugar Cookies"
               class="card__image" />
             <div class="card__body">
@@ -60,4 +88,11 @@
     </div>
 
 </div>
-{% endblock %}
+
+        </main>
+
+        <footer>
+            <p>Created by Patrick Kennedy (2021)</p>
+        </footer>
+    </body>
+</html>

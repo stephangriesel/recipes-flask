@@ -151,7 +151,7 @@ def test_get_dessert_recipes(test_client):
     WHEN the '/dessert/' page is requested (GET)
     THEN check the response is valid
     """
-    recipes = [b'Brownies']
+    recipes = [b'Brownies', b'Chocolate Chip Cookies', b'Linzer Cookies', b'Sugar Cookies']
     response = test_client.get('/dessert/')
     assert response.status_code == 200
     for recipe in recipes:

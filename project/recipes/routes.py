@@ -7,7 +7,7 @@ breakfast_recipes_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'break
 dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza']
 baked_goods_recipes_names = ['bagels', 'french_bread', 'pitas']
 side_dishes_recipes_names = ['sweet_potatoes', 'spanish_rice']
-dessert_recipes_names = ['brownies']
+dessert_recipes_names = ['brownies', 'chocolate_chip_cookies', 'linzer_cookies', 'sugar_cookies']
 
 
 @recipes_blueprint.route('/')
