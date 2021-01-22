@@ -3,7 +3,7 @@ This file (test_recipes.py) contains the functional tests for the `recipes` blue
 """
 from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names,\
                                    baked_goods_recipes_names, side_dishes_recipes_names, \
-                                   dessert_recipes_names
+                                   dessert_recipes_names, smoothies_recipes_names
 
 
 def test_get_home_page(test_client):
@@ -67,6 +67,8 @@ def test_get_invalid_individual_recipes(test_client):
         response = test_client.get(f'/side_dishes/{recipe_name}/')
         assert response.status_code == 404
         response = test_client.get(f'/dessert/{recipe_name}/')
+        assert response.status_code == 404
+        response = test_client.get(f'/smoothies/{recipe_name}/')
         assert response.status_code == 404
 
 
@@ -166,5 +168,30 @@ def test_get_individual_dessert_recipes(test_client):
     """
     for recipe_name in dessert_recipes_names:
         response = test_client.get(f'/dessert/{recipe_name}/')
+        assert response.status_code == 200
+        assert str.encode(recipe_name) in response.data
+
+
+def test_get_smoothies_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/smoothies/' page is requested (GET)
+    THEN check the response is valid
+    """
+    recipes = [b'Berry Smoothie', b'Chocolate Milk Shake']
+    response = test_client.get('/smoothies/')
+    assert response.status_code == 200
+    for recipe in recipes:
+        assert recipe in response.data
+
+
+def test_get_individual_smoothies_recipes(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/smoothies/<recipe_name>' page is requested (GET)
+    THEN check the response is valid
+    """
+    for recipe_name in smoothies_recipes_names:
+        response = test_client.get(f'/smoothies/{recipe_name}/')
         assert response.status_code == 200
         assert str.encode(recipe_name) in response.data
