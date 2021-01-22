@@ -76,3 +76,7 @@
 .recipe-detail-container li {
     padding: 0.6rem 0;
 }
+
+.recipe-detail-container a, .recipe-detail-container a:visited {
+    color: #9e9ed4;
+}
