@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block styling %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog_style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+
+    <div class="blog-post-card card-overlay">
+        <img
+          src="{{ url_for('static', filename='img/breakfast.jpg') }}"
+          alt="Breakfast"
+          class="blog-post-card__image" />
+        <div class="blog-post-card__body">
+            <h2>Why I Love my Kitchenaid Stand Mixer</h2>
+            <p>The Kitchenaid stand mixer is such a versatile kitchen tool for making lots of different recipes.</p>
+            <p class="blog-post-card__date">Published on January 7th, 2021</p>
+        </div>
+        <div class="blog-post-card__link">
+            <a href="{{ url_for('blog.posts', blog_title='kitchenaid_mixer') }}">Read Article</a>
+        </div>
+    </div>
+
+    <div class="blog-post-card card-overlay">
+        <img
+          src="{{ url_for('static', filename='img/breakfast.jpg') }}"
+          alt="Breakfast"
+          class="blog-post-card__image" />
+        <div class="blog-post-card__body">
+            <h2>My Ten Favorite Kitchen Accessories</h2>
+            <p>There are so many smaller accessories that make cooking and baking easier... this is my list of my ten favorites!</p>
+            <p class="blog-post-card__date">Published on January 16th, 2021</p>
+        </div>
+        <div class="blog-post-card__link">
+            <a href="#">Read Article</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

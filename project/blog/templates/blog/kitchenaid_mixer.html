@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block styling %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blogpost_style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="blogpost-container  card-overlay">
+    <div class="blogpost__heading">
+        <h1>Why I Love the Kitchenaid Stand Mixer</h1>
+        <h3>by Patrick Kennedy</h3>
+        <p class="blogpost__date">Published on January 7th, 2021</p>
+    </div>
+
+    <div class="blogpost__image">
+        <img
+          src="{{ url_for('static', filename='img/breakfast.jpg') }}"
+          alt="Breakfast"
+          class="blogpost__image" />
+    </div>
+
+    <div class="blogpost__article">
+        <p>The Kitchenaid stand mixer is such a versatile kitchen appliance, especially when it comes to baking.</p>
+        <p>I use it for mixing all kinds of cookies and cakes, but I recently bought some attachments for making fresh pasta.</p>
+    </div>
+</div>
+{% endblock %}
