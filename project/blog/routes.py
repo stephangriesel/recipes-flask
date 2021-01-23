@@ -16,3 +16,8 @@ def posts(blog_title):
         abort(404)
 
     return render_template(f'blog/{blog_title}.html')
+
+
+@blog_blueprint.route('/about/')
+def about():
+    return render_template('blog/about.html')
