@@ -3,7 +3,7 @@
 .blog-container {
   margin: 2.0rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 0.5fr));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 0.3fr));
   grid-gap: 2.0rem;
   justify-content: center;
 }
@@ -25,7 +25,11 @@
 .blog-post-card__body {
   width: 100%;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+}
+
+.blog-post-card__body h2 {
+  padding-bottom: 0.7rem;
 }
 
 .blog-post-card__body p {
@@ -33,8 +37,8 @@
 }
 
 .blog-post-card__date {
-  font-weight: bolder;
-  font-size: 0.9rem;
+  font-weight: lighter;
+  font-size: 0.8rem;
 }
 
 .blog-post-card__link {

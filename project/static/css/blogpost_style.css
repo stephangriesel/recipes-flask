@@ -32,3 +32,20 @@
 .blogpost__article p {
   padding: 0.5rem 0;
 }
+
+.blogpost__article ul, .blogpost__article ol{
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.blogpost__article li {
+  padding: 0.2rem 0;
+}
+
+.blogpost__article a, .blogpost__article a:visited {
+  color: #9e9ed4;
+}
+
+.article__image {
+  text-align: center;
+}
