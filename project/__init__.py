@@ -21,10 +21,12 @@ def create_app():
 def register_blueprints(app):
     # Import the blueprints
     from project.recipes import recipes_blueprint
+    from project.blog import blog_blueprint
 
     # Since the application instance is now created, register each Blueprint
     # with the Flask application instance (app)
     app.register_blueprint(recipes_blueprint)
+    app.register_blueprint(blog_blueprint)
 
 
 def register_error_pages(app):
