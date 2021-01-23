@@ -153,6 +153,10 @@ nav ul {
   font-weight: bold;
 }
 
+.recipe-title-long {
+    font-size: 1.25rem;
+}
+
 .card__body p {
   font-weight: lighter;
 }
