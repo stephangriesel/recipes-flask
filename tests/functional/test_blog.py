@@ -41,3 +41,16 @@ def test_get_invalid_individual_recipes(test_client):
     for blog_title in invalid_blog_titles:
         response = test_client.get(f'/blog/{blog_title}/')
         assert response.status_code == 404
+
+
+def test_get_about_page(test_client):
+    """
+    GIVEN a Flask application configured for testing
+    WHEN the '/about/' page is requested (GET)
+    THEN check the response is valid
+    """
+    headings = [b'About', b'Recipes', b'Technology']
+    response = test_client.get('/about/')
+    assert response.status_code == 200
+    for heading in headings:
+        assert heading in response.data
