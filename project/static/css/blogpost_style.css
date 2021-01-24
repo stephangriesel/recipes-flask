@@ -49,3 +49,7 @@
 .article__image {
   text-align: center;
 }
+
+h2 {
+  margin: 1rem 0;
+}
