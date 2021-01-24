@@ -1,16 +1,16 @@
 ## Overview
 
-This Flask application displays my family's favorite recipes!
+This Flask application displays my family's favorite recipes!  [Frozen-Flask](https://pythonhosted.org/Frozen-Flask/) is
+used to generate the static files based on the routes specified in the Flask app.  These static files are hosted on
+[Netlify](https://www.netlify.com):
 
-## How to Run
+![Kennedy Family Recipes](project/static/img/flask_recipe_app_screenshot.png?raw=true "Kennedy Family Recipes")
 
-In the top-level directory:
+For details on how this Flask app generates static files, check out the [Generating a Static Site with Flask and Deploying it to Netlify](https://testdriven.io/blog/) blog post on [TestDriven](https://testdriven.io/).
 
-```sh
-$ export FLASK_APP=app.py
-$ export FLASK_ENV=development
-$ flask run
-```
+## Website
+
+[https://www.kennedyrecipes.com/](https://www.kennedyrecipes.com/)
 
 ## Installation Instructions
 
@@ -39,7 +39,11 @@ Install the python packages in requirements.txt:
 (venv) $ pip install -r requirements.txt
 ```
 
-Set the file that contains the Flask application and specify that the development environment should be used:
+
+## Run the Development Server
+
+In the top-level directory, set the file that contains the Flask application and specify that the development environment should be used:
+
 
 ```sh
 (venv) $ export FLASK_APP=app.py
@@ -52,13 +56,21 @@ Run development server to serve the Flask application:
 (venv) $ flask run
 ```
 
-## Configuration
+## Build the Static Files
 
-TBD
+In the top-level directory, run the build script:
+
+```sh
+(venv) $ python build.py
+```
+
+The static files are generated in the */project/build/* directory, which can then be hosted on Netlify.
 
 ## Key Python Modules Used
 
-* Flask: micro-framework for web application development
+* Flask - micro-framework for web application development
+* Jinga - templating engine
+* Frozen-Flask - generates static files from Flask routes
 
 This application is written using Python 3.9.0.
 
