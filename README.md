@@ -56,6 +56,8 @@ Run development server to serve the Flask application:
 (venv) $ flask run
 ```
 
+Navigate to 'http://localhost:5000' to view the website!
+
 ## Build the Static Files
 
 In the top-level directory, run the build script:
