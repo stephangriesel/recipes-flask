@@ -22,7 +22,7 @@
 .recipe-detail-container {
     margin: auto;
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    /*grid-template-columns: 10% auto 10%;*/
     grid-auto-rows: minmax(50px, auto);
     grid-gap: 1rem;
     grid-template-areas:
@@ -34,9 +34,21 @@
         "...  steps        ..."
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
     .recipe-detail-container {
-        grid-template-columns: 10% 25% auto 10%;
+        margin: 0 12px;
+        grid-template-columns: 25% auto;
+        grid-template-areas:
+            "title        title"
+            "description  image"
+            "tips         tips"
+            "ingredients  steps"
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .recipe-detail-container {
+        grid-template-columns: 5% 25% auto 5%;
         grid-template-areas:
             "...  title        title  ..."
             "...  description  image  ..."
@@ -50,7 +62,14 @@
  *****************/
 .recipe-title {
     margin: auto;
-    font-size: 2.0em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .recipe-title {
+        font-size: 2.0em;
+    }
 }
 
 .recipe-detail-container h2 {
