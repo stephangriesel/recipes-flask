@@ -50,7 +50,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   margin: 12px;
-  padding: 0.2rem 0.4rem;
+  padding: 0.5rem 0.4rem;
   border-radius: var(--radius);
   background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
   box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.52);
@@ -66,14 +66,16 @@ header {
 }
 
 header h1 {
-    text-align: center;
-    font-size: 1.6rem;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: 0.6rem;
 }
 
 @media screen and (min-width: 800px) {
     header h1 {
-        text-align: none;
-        font-size: 1.8rem;
+      text-align: none;
+      font-size: 1.8rem;
+      padding-bottom: 0;
     }
 }
 
@@ -168,7 +170,8 @@ nav ul {
 }
 
 .recipe-title-long {
-    font-size: 1.25rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.35rem;
 }
 
 .card__body p {
