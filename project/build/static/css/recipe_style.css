@@ -80,17 +80,19 @@
 }
 
 .recipe-detail-container p {
-    padding: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
 }
 
 .recipe-image img {
     width: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .recipe-detail-container ul, .recipe-detail-container ol {
     list-style-position: inside;
-    padding: 1rem 0;
+    padding-bottom: 0.5rem;
 }
 
 .recipe-detail-container li {
