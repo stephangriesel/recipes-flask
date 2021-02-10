@@ -4,7 +4,7 @@ from flask import render_template, abort
 
 breakfast_recipes_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'breakfast_scramble',
                            'pumpkin_donuts', 'waffles', 'omelette']
-dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza', 'sweet_fire_chicken']
+dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza', 'sweet_fire_chicken', 'tri_tip']
 baked_goods_recipes_names = ['bagels', 'french_bread', 'pitas']
 side_dishes_recipes_names = ['sweet_potatoes', 'spanish_rice', 'jasmine_rice']
 dessert_recipes_names = ['brownies', 'chocolate_chip_cookies', 'linzer_cookies', 'sugar_cookies']
