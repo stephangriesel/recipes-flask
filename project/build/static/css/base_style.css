@@ -130,9 +130,17 @@ nav ul {
   margin: 2.0rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 0.3fr));
-  grid-gap: 2.0rem;
+  grid-gap: 1.0rem;
   justify-content: center;
 }
+
+@media screen and (min-width: 1050px) {
+  .recipe-container {
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 0.3fr));
+    grid-gap: 2.0rem;
+  }
+}
+
 
 .card {
   overflow: hidden;
