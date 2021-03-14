@@ -134,7 +134,7 @@ nav ul {
   justify-content: center;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1081px) {
   .recipe-container {
     grid-template-columns: repeat(auto-fit, minmax(22rem, 0.3fr));
     grid-gap: 2.0rem;
