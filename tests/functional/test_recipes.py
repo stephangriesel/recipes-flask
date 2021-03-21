@@ -103,7 +103,7 @@ def test_get_baked_goods_recipes(test_client):
     WHEN the '/baked_goods/' page is requested (GET)
     THEN check the response is valid
     """
-    recipes = [b'Bagels', b'French Bread', b'Pitas']
+    recipes = [b'Bagels', b'French Bread', b'Pitas', b'Irish Soda Bread']
     response = test_client.get('/baked_goods/')
     assert response.status_code == 200
     for recipe in recipes:
