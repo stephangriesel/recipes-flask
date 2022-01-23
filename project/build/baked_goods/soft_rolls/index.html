@@ -1,30 +1,70 @@
-{% extends "recipe.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Flask Recipe App</title>
 
-{% block recipe_title %}
+        <!-- Local CSS file for styling the application-->
+        <link rel="stylesheet" href="/static/css/base_style.css">
+
+        <!-- Additional Styling -->
+        
+<link rel="stylesheet" href="/static/css/recipe_style.css">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Kennedy Family Recipes</h1>
+            <nav>
+                <ul>
+                    <li class="nav__item"><a href="/" class="nav__link">Recipes</a></li>
+                    <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <!-- child template -->
+            
+<div class="recipe-detail-container">
+    <div class="recipe-title">
+        
 <h1>Soft Rolls</h1>
-{% endblock %}
 
-{% block recipe_description %}
+    </div>
+
+    <div class="recipe-description card-overlay">
+        
 <h2>Description</h2>
 <p>Soft rolls are little clouds of bread that are delicious by themselves, with butter, or as hamburger rolls.</p>
 <p>These rolls take a much shorter time to make than traditional breads (with long proofing times), so they are perfect for making during the week.</p>
 <p>I've stopped buying hamburger rolls from the grocery store, as I always use these soft rolls to make hamburgers.</p>
 <p>A soft roll with strawberry jam is perfect for breakfast the next morning after making a batch of these delicious rolls!</p>
 <p>This recipe is based on this amazing recipe from Bigger Bolder Baking: <a href="https://www.biggerbolderbaking.com/dinner-rolls-1-hour/">Dinner Rolls</a>.</p>
-{% endblock %}
 
-{% block recipe_image %}
-<img src="{{ url_for('static', filename='img/soft_rolls.jpg') }}"  alt="Soft Rolls" />
-{% endblock %}
+    </div>
 
-{% block recipe_tips %}
+    <div class="recipe-image">
+        
+<img src="/static/img/soft_rolls.jpg"  alt="Soft Rolls" />
+
+    </div>
+
+    <div class="recipe-tips card-overlay">
+        
 <h2>Tips</h2>
 <p>Since this recipe uses active dry yeast, make sure to bloom the yeast in warm water (approximately 100 degrees Fahrenheit (F)).</p>
 <p>The proofing times for these rolls are very short, so make sure to include sugar when blooming the yeast to jump-start it.</p>
 <p>When placing the dough balls onto a baking sheet (with parchment paper), leave about 2 centimeters (cm) between the dough balls, as they will expand during the final proof.  They should be slightly touching when they go into the oven.</p>
-{% endblock %}
 
-{% block recipe_ingredients %}
+    </div>
+
+    <div class="recipe-ingredients card-overlay">
+        
 <h2>List of Ingredients</h2>
 <ul>
     <li>4 cups of All-Purpose Flour</li>
@@ -35,9 +75,11 @@
     <li>1.5 Cups of Warm Water (approximately 100 degrees Fahrenheit (F))</li>
     <li>Canola Oil (spray)</li>
 </ul>
-{% endblock %}
 
-{% block recipe_steps %}
+    </div>
+
+    <div class="recipe-steps card-overlay">
+        
 <h2>Recipe Steps</h2>
 <ol>
     <li>In the bowl of a stand mixer (such as Kitchenaid), add the yeast, warm water, and sugar.  The yeast needs time to bloom, so wait for 5-8 minutes to check that the yeast starts bubbling (activating).</li>
@@ -58,4 +100,14 @@
     <li>Once the rise time is completed, remove the cling wrap and bake in the oven for 20 minutes.</li>
     <li>Let the rolls rest for 10 minutes before enjoying!</li>
 </ol>
-{% endblock %}
+
+    </div>
+</div>
+
+        </main>
+
+        <footer>
+            <p>Created by Patrick Kennedy (2021)</p>
+        </footer>
+    </body>
+</html>

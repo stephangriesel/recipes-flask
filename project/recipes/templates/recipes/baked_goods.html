@@ -59,5 +59,19 @@
         </a>
     </div>
 
+    <div class="card">
+        <a href="{{ url_for('recipes.baked_goods_recipe', recipe_name='soft_rolls') }}">
+            <img
+              src="{{ url_for('static', filename='img/soft_rolls.jpg') }}"
+              alt="Soft Rolls"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Soft Rolls</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
 </div>
 {% endblock %}
