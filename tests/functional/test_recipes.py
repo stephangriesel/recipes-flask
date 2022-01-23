@@ -1,7 +1,7 @@
 """
 This file (test_recipes.py) contains the functional tests for the `recipes` blueprint.
 """
-from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names,\
+from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names, \
                                    baked_goods_recipes_names, side_dishes_recipes_names, \
                                    dessert_recipes_names, smoothies_recipes_names
 
@@ -103,7 +103,7 @@ def test_get_baked_goods_recipes(test_client):
     WHEN the '/baked_goods/' page is requested (GET)
     THEN check the response is valid
     """
-    recipes = [b'Bagels', b'French Bread', b'Pitas', b'Irish Soda Bread']
+    recipes = [b'Bagels', b'French Bread', b'Pitas', b'Irish Soda Bread', b'Soft Rolls']
     response = test_client.get('/baked_goods/')
     assert response.status_code == 200
     for recipe in recipes:
