@@ -3,7 +3,7 @@ This file (test_recipes.py) contains the functional tests for the `recipes` blue
 """
 from project.recipes.routes import breakfast_recipes_names, dinner_recipes_names, \
                                    baked_goods_recipes_names, side_dishes_recipes_names, \
-                                   dessert_recipes_names, smoothies_recipes_names
+                                   dessert_recipes_names, drink_recipes_names
 
 
 def test_get_home_page(test_client):
@@ -14,7 +14,7 @@ def test_get_home_page(test_client):
     """
     header_items = [b'Kennedy Family Recipes', b'Recipes', b'Blog', b'About']
     recipe_types = [b'Breakfast', b'Dinner', b'Side Dishes',
-                    b'Dessert', b'Smoothies', b'Baked Goods']
+                    b'Dessert', b'Drinks', b'Baked Goods']
     response = test_client.get('/')
     assert response.status_code == 200
     for header_item in header_items:
@@ -68,7 +68,7 @@ def test_get_invalid_individual_recipes(test_client):
         assert response.status_code == 404
         response = test_client.get(f'/dessert/{recipe_name}/')
         assert response.status_code == 404
-        response = test_client.get(f'/smoothies/{recipe_name}/')
+        response = test_client.get(f'/drink/{recipe_name}/')
         assert response.status_code == 404
 
 
@@ -172,26 +172,26 @@ def test_get_individual_dessert_recipes(test_client):
         assert str.encode(recipe_name) in response.data
 
 
-def test_get_smoothies_recipes(test_client):
+def test_get_drink_recipes(test_client):
     """
     GIVEN a Flask application configured for testing
-    WHEN the '/smoothies/' page is requested (GET)
+    WHEN the '/drink/' page is requested (GET)
     THEN check the response is valid
     """
-    recipes = [b'Berry Smoothie', b'Chocolate Milk Shake']
-    response = test_client.get('/smoothies/')
+    recipes = [b'Berry Smoothie', b'Chocolate Milk Shake', b'Apple Cider Vinegar Drink']
+    response = test_client.get('/drink/')
     assert response.status_code == 200
     for recipe in recipes:
         assert recipe in response.data
 
 
-def test_get_individual_smoothies_recipes(test_client):
+def test_get_individual_drink_recipes(test_client):
     """
     GIVEN a Flask application configured for testing
-    WHEN the '/smoothies/<recipe_name>' page is requested (GET)
+    WHEN the '/drink/<recipe_name>' page is requested (GET)
     THEN check the response is valid
     """
-    for recipe_name in smoothies_recipes_names:
-        response = test_client.get(f'/smoothies/{recipe_name}/')
+    for recipe_name in drink_recipes_names:
+        response = test_client.get(f'/drink/{recipe_name}/')
         assert response.status_code == 200
         assert str.encode(recipe_name) in response.data
