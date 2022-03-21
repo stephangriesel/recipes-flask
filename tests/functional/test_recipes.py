@@ -31,7 +31,7 @@ def test_get_breakfast_recipes(test_client):
     """
     recipes = [b'Pancakes', b'Honey Bran Muffins', b'Acai Bowl',
                b'Breakfast Scramble', b'Pumpkin Donuts', b'Waffles',
-               b'Omelette', b'Chocolate Donuts']
+               b'Omelette', b'Chocolate Donuts', b'Oatmeal']
     response = test_client.get('/breakfast/')
     assert response.status_code == 200
     for recipe in recipes:
