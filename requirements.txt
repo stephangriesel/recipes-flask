@@ -4,9 +4,11 @@ coverage==5.3.1
 flake8==3.8.4
 Flask==1.1.2
 Frozen-Flask==0.15
+importlib-metadata==4.11.4
 iniconfig==1.1.1
 itsdangerous==1.1.0
 Jinja2==2.11.2
+Markdown==3.3.7
 MarkupSafe==1.1.1
 mccabe==0.6.1
 packaging==20.8
@@ -19,3 +21,4 @@ pytest==6.2.1
 pytest-cov==2.10.1
 toml==0.10.2
 Werkzeug==1.0.1
+zipp==3.8.0
