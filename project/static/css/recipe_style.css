@@ -102,3 +102,7 @@
 .recipe-detail-container a, .recipe-detail-container a:visited {
     color: #9e9ed4;
 }
+
+.recipe-detail-container h4 {
+    padding-top: 0.5em;
+}
