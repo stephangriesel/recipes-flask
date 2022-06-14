@@ -22,7 +22,7 @@ Use a sift for adding the cocoa powder into the batter and also for dusting the 
 
 * 4 ounces of Bittersweet Chocolate (not unsweetened)
 * 1 stick of Dairy-Free Butter (recommendation: [Earth Balance - Soy Free Butter Spread](https://www.earthbalancenatural.com/spreads/soy-free-buttery-spread))
-* ¾ cup of Granulated Sugar
+* 0.75 cups of Granulated Sugar
 * 3 large Eggs
 * 0.5 cups of Unsweetened Cocoa Powder
 * Powdered Sugar (for sprinkling cake after baking)
