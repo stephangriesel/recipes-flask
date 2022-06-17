@@ -129,7 +129,7 @@ def test_get_side_dishes_recipes(test_client):
     WHEN the '/side_dishes/' page is requested (GET)
     THEN check the response is valid
     """
-    recipes = [b'Sweet Potatoes', b'Spanish Rice', b'Jasmine Rice']
+    recipes = [b'Sweet Potatoes', b'Spanish Rice', b'Jasmine Rice', b'Fruit Salad']
     response = test_client.get('/side_dishes/')
     assert response.status_code == 200
     for recipe in recipes:
