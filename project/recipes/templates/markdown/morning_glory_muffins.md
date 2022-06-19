@@ -8,6 +8,10 @@ Morning Glory Muffins are delicious and such a treat to have for breakfast or as
 
 The combination of shredded carrots and raisins works so well in these muffins, as the outside is slightly crunchy but the inside is soft and moist.
 
+This recipe is adapted from the [Morning Glory Muffins recipe from Martha Stewart](https://www.marthastewart.com/339779/morning-glory-muffins).
+
+A lot of recipes for Morning Glory Muffins include additional fillings like shredded apples, coconut flakes, almonds, and/or walnuts.  Feel free to include any fillings that you enjoy!
+
 ## Image
 
 <img src="{{ url_for('static', filename='img/morning_glory_muffins.jpg') }}" alt="Morning Glory Muffins" />

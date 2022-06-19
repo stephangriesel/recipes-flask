@@ -79,7 +79,7 @@ def test_get_dinner_recipes(test_client):
     THEN check the response is valid
     """
     recipes = [b'Steak Fajitas', b'Ground Beef Tacos', b'Pizza', b'Sweet Fire Chicken', b'Tri-Tip',
-               b'Shredded Chicken', b'Taquitos']
+               b'Shredded Chicken', b'Taquitos', b'Red Lentil Chili']
     response = test_client.get('/dinner/')
     assert response.status_code == 200
     for recipe in recipes:
