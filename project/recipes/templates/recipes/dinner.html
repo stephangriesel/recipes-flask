@@ -100,5 +100,19 @@
         </a>
     </div>
 
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipe', recipe_name='red_lentil_chili') }}">
+            <img
+              src="{{ url_for('static', filename='img/red_lentil_chili.jpg') }}"
+              alt="Red Lentil Chili"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Red Lentil Chili</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
 </div>
 {% endblock %}
