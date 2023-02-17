@@ -58,6 +58,7 @@ Navigate to 'http://127.0.0.1:5000/' in your favorite web browser to view the we
   * MarkupSafe: escapes characters so text is safe to use in HTML and XML
   * Werkzeug: set of utilities for creating a Python application that can talk to a WSGI server
 * **Frozen-Flask** - generates static files from Flask routes
+* **Markdown** - text-to-HTML conversion tool
 * **pytest**: framework for testing Python projects
 * **pytest-cov**: pytest extension for running coverage.py to check code coverage of tests
 * **flake8**: static analysis tool
