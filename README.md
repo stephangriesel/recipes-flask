@@ -39,11 +39,9 @@ Install the python packages in requirements.txt:
 (venv) $ pip install -r requirements.txt
 ```
 
-
 ## Run the Development Server
 
 In the top-level directory, set the file that contains the Flask application and specify that the development environment should be used:
-
 
 ```sh
 (venv) $ export FLASK_APP=app.py
@@ -58,16 +56,6 @@ Run development server to serve the Flask application:
 
 Navigate to 'http://localhost:5000' to view the website!
 
-## Build the Static Files
-
-In the top-level directory, run the build script:
-
-```sh
-(venv) $ python build.py
-```
-
-The static files are generated in the */project/build/* directory, which can then be hosted on Netlify.
-
 ## Key Python Modules Used
 
 * Flask - micro-framework for web application development
@@ -81,11 +69,39 @@ This application is written using Python 3.9.0.
 To run all the tests:
 
 ```sh
-(venv) $ pytest -v
+(venv) $ python -m pytest
 ```
 
 To check the code coverage of the tests:
 
 ```sh
-(venv) $ pytest --cov-report term-missing --cov=project
+(venv) $ python -m pytest --cov-report term-missing --cov=project
 ```
+
+## Adding a New Recipe
+
+1. Add the new image to *project/static/img/*.
+2. Copy *project/recipes/template/markdown/recipe_starter.md* to a new file in the same directory with the recipe name as the filename.
+3. Update the new *project/recipes/template/markdown/<recipe_name>.md* file with the recipe description, ingredients, and steps.
+4. Generate the HTML file for the new recipe:
+```sh
+$ python project/recipes/templates/md_to_html.py
+```
+5. Add a new section to the applicable recipe section HTML file (i.e. *project/recipes/template/recipes/baked_good.html*, *project/recipes/template/recipes/dinner.html*, etc.).
+6. Add the recipe name to the top of *project/recipes/routes.py*.
+7. Update the number of recipes for the applicable recipe section in *project/recipes/template/recipes/recipes.html*.
+
+Lastly, run the tests to make sure everything is working as expected:
+```sh
+(venv) $ python -m pytest
+```
+
+### Build the Static Files
+
+In the top-level directory, run the build script:
+
+```sh
+(venv) $ python build.py
+```
+
+The static files are generated in the */project/build/* directory, which can then be hosted on Netlify.
