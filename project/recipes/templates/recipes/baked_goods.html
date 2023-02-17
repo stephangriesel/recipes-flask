@@ -100,5 +100,19 @@
             </div>
         </a>
     </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.baked_goods_recipe', recipe_name='banana_bread') }}">
+            <img
+              src="{{ url_for('static', filename='img/banana_bread.jpg') }}"
+              alt="Banana Bread"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Banana Bread</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
 </div>
 {% endblock %}

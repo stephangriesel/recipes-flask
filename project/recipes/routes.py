@@ -8,7 +8,7 @@ breakfast_recipes_names = ['pancakes', 'acai_bowl', 'honey_bran_muffins', 'break
 dinner_recipes_names = ['steak_fajitas', 'ground_beef_tacos', 'pizza', 'sweet_fire_chicken', 'tri_tip',
                         'shredded_chicken', 'taquitos', 'red_lentil_chili']
 baked_goods_recipes_names = ['bagels', 'french_bread', 'pitas', 'irish_soda_bread', 'soft_rolls',
-                             'pizza_dough', 'pitas2']
+                             'pizza_dough', 'pitas2', 'banana_bread']
 side_dishes_recipes_names = ['sweet_potatoes', 'spanish_rice', 'jasmine_rice', 'fruit_salad']
 dessert_recipes_names = ['brownies', 'chocolate_chip_cookies', 'linzer_cookies', 'sugar_cookies',
                          'flourless_chocolate_cake']
