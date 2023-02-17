@@ -41,28 +41,28 @@ Install the python packages in requirements.txt:
 
 ## Run the Development Server
 
-In the top-level directory, set the file that contains the Flask application and specify that the development environment should be used:
-
-```sh
-(venv) $ export FLASK_APP=app.py
-(venv) $ export FLASK_ENV=development
-```
-
 Run development server to serve the Flask application:
 
 ```sh
-(venv) $ flask run
+(venv) $ flask --app app --debug run
 ```
 
-Navigate to 'http://localhost:5000' to view the website!
+Navigate to 'http://127.0.0.1:5000/' in your favorite web browser to view the website!
 
 ## Key Python Modules Used
 
-* Flask - micro-framework for web application development
-* Jinga - templating engine
-* Frozen-Flask - generates static files from Flask routes
+* **Flask**: micro-framework for web application development which includes the following dependencies:
+  * click: package for creating command-line interfaces (CLI)
+  * itsdangerous: cryptographically sign data 
+  * Jinja2: templating engine
+  * MarkupSafe: escapes characters so text is safe to use in HTML and XML
+  * Werkzeug: set of utilities for creating a Python application that can talk to a WSGI server
+* **Frozen-Flask** - generates static files from Flask routes
+* **pytest**: framework for testing Python projects
+* **pytest-cov**: pytest extension for running coverage.py to check code coverage of tests
+* **flake8**: static analysis tool
 
-This application is written using Python 3.9.0.
+This application is written using Python 3.11.0.
 
 ## Unit Testing
 
