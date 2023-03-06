@@ -1,25 +1,5 @@
 ## Overview
 
-This Flask application displays my family's favorite recipes!  [Frozen-Flask](https://pythonhosted.org/Frozen-Flask/) is
-used to generate the static files based on the routes specified in the Flask app.  These static files are hosted on
-[Netlify](https://www.netlify.com):
-
-![Kennedy Family Recipes](project/static/img/flask_recipe_app_screenshot.png?raw=true "Kennedy Family Recipes")
-
-For details on how this Flask app generates static files, check out the [Generating a Static Site with Flask and Deploying it to Netlify](https://testdriven.io/blog/) blog post on [TestDriven](https://testdriven.io/).
-
-## Website
-
-[https://www.kennedyrecipes.com/](https://www.kennedyrecipes.com/)
-
-## Installation Instructions
-
-Pull down the source code from this GitLab repository:
-
-```sh
-git clone git@gitlab.com:patkennedy79/flask-recipe-app.git
-```
-
 Create a new virtual environment:
 
 ```sh
@@ -51,17 +31,17 @@ Navigate to 'http://127.0.0.1:5000/' in your favorite web browser to view the we
 
 ## Key Python Modules Used
 
-* **Flask**: micro-framework for web application development which includes the following dependencies:
-  * click: package for creating command-line interfaces (CLI)
-  * itsdangerous: cryptographically sign data 
-  * Jinja2: templating engine
-  * MarkupSafe: escapes characters so text is safe to use in HTML and XML
-  * Werkzeug: set of utilities for creating a Python application that can talk to a WSGI server
-* **Frozen-Flask** - generates static files from Flask routes
-* **Markdown** - text-to-HTML conversion tool
-* **pytest**: framework for testing Python projects
-* **pytest-cov**: pytest extension for running coverage.py to check code coverage of tests
-* **flake8**: static analysis tool
+- **Flask**: micro-framework for web application development which includes the following dependencies:
+  - click: package for creating command-line interfaces (CLI)
+  - itsdangerous: cryptographically sign data
+  - Jinja2: templating engine
+  - MarkupSafe: escapes characters so text is safe to use in HTML and XML
+  - Werkzeug: set of utilities for creating a Python application that can talk to a WSGI server
+- **Frozen-Flask** - generates static files from Flask routes
+- **Markdown** - text-to-HTML conversion tool
+- **pytest**: framework for testing Python projects
+- **pytest-cov**: pytest extension for running coverage.py to check code coverage of tests
+- **flake8**: static analysis tool
 
 This application is written using Python 3.11.0.
 
@@ -81,18 +61,21 @@ To check the code coverage of the tests:
 
 ## Adding a New Recipe
 
-1. Add the new image to *project/static/img/*.
-2. Copy *project/recipes/template/markdown/recipe_starter.md* to a new file in the same directory with the recipe name as the filename.
-3. Update the new *project/recipes/template/markdown/<recipe_name>.md* file with the recipe description, ingredients, and steps.
+1. Add the new image to _project/static/img/_.
+2. Copy _project/recipes/template/markdown/recipe_starter.md_ to a new file in the same directory with the recipe name as the filename.
+3. Update the new _project/recipes/template/markdown/<recipe_name>.md_ file with the recipe description, ingredients, and steps.
 4. Generate the HTML file for the new recipe:
+
 ```sh
 $ python project/recipes/templates/md_to_html.py
 ```
-5. Add a new section to the applicable recipe section HTML file (i.e. *project/recipes/template/recipes/baked_good.html*, *project/recipes/template/recipes/dinner.html*, etc.).
-6. Add the recipe name to the top of *project/recipes/routes.py*.
-7. Update the number of recipes for the applicable recipe section in *project/recipes/template/recipes/recipes.html*.
+
+5. Add a new section to the applicable recipe section HTML file (i.e. _project/recipes/template/recipes/baked_good.html_, _project/recipes/template/recipes/dinner.html_, etc.).
+6. Add the recipe name to the top of _project/recipes/routes.py_.
+7. Update the number of recipes for the applicable recipe section in _project/recipes/template/recipes/recipes.html_.
 
 Lastly, run the tests to make sure everything is working as expected:
+
 ```sh
 (venv) $ python -m pytest
 ```
@@ -105,4 +88,4 @@ In the top-level directory, run the build script:
 (venv) $ python build.py
 ```
 
-The static files are generated in the */project/build/* directory, which can then be hosted on Netlify.
+The static files are generated in the _/project/build/_ directory, which can then be hosted on Netlify.
